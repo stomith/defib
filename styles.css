@@ -1,0 +1,455 @@
+/* styles.css - The Defibrillators Band Website */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    color: #c9c0b3;
+    background-color: #0e0e0e;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ----------------------------------------
+   Header & Navigation
+   ---------------------------------------- */
+header {
+    background: #111111;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #c9a84c;
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    font-family: 'Raleway', sans-serif;
+    color: #a09588;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #c9a84c;
+}
+
+/* ----------------------------------------
+   Hero Section
+   ---------------------------------------- */
+.hero {
+    position: relative;
+    background: #0e0e0e;
+    color: #fff;
+    padding: 160px 20px 140px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, #0e0e0e 0%, transparent 15%, transparent 85%, #0e0e0e 100%),
+        linear-gradient(135deg, rgba(60, 40, 10, 0.5) 0%, rgba(20, 15, 5, 0.8) 50%, rgba(40, 30, 10, 0.5) 100%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4.2rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 0 60px rgba(201, 168, 76, 0.25);
+}
+
+.bolt {
+    display: inline-block;
+    margin-left: -0.42em;
+    text-shadow: none;
+}
+
+.tagline {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #a09588;
+    margin-bottom: 0.6rem;
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #6b6359;
+}
+
+/* ----------------------------------------
+   About Section
+   ---------------------------------------- */
+.about-section {
+    padding: 100px 20px;
+    background: #111111;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.about-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.band-bio p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    color: #a09588;
+}
+
+/* ----------------------------------------
+   Musicians Section
+   ---------------------------------------- */
+.musicians-section {
+    padding: 100px 20px;
+    background: #0e0e0e;
+}
+
+.musicians-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.musicians-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.musician-card {
+    background: #141414;
+    border: 1px solid #252525;
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.musician-card:hover {
+    border-color: #c9a84c;
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.08);
+}
+
+.musician-photo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 1.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #2a2a2a;
+    background: #1a1a1a;
+    transition: border-color 0.4s;
+}
+.musician-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.musician-card:hover .musician-photo {
+    border-color: #c9a84c;
+}
+
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a4540;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.musician-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #c9a84c;
+    margin-bottom: 0.4rem;
+}
+
+.instrument {
+    font-size: 0.78rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #6b6359;
+    margin-bottom: 1.2rem;
+}
+
+.bio {
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #8a8078;
+}
+
+/* ----------------------------------------
+   Songs Section
+   ---------------------------------------- */
+.songs-section {
+    padding: 100px 20px;
+    background: #111111;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.songs-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.songs-intro {
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #6b6359;
+    margin-bottom: 3.5rem;
+}
+
+.songs-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 960px;
+    margin: 0 auto 2rem;
+}
+
+.song-column h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.song-column ul {
+    list-style: none;
+}
+
+.song-column li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #1e1e1e;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #a09588;
+    transition: color 0.3s, padding-left 0.3s;
+    padding-left: 0;
+}
+
+.song-column li:hover {
+    color: #c9a84c;
+    padding-left: 10px;
+}
+
+.songs-note {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4a4540;
+    margin-top: 2.5rem;
+}
+
+/* ----------------------------------------
+   Contact Section
+   ---------------------------------------- */
+.contact-section {
+    padding: 100px 20px;
+    background: #0e0e0e;
+    color: #a09588;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    margin-bottom: 1.5rem;
+}
+
+.contact-section p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-section a {
+    color: #c9a84c;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #e0c56a;
+}
+
+/* ----------------------------------------
+   Footer
+   ---------------------------------------- */
+footer {
+    background: #0a0a0a;
+    border-top: 1px solid #1f1f1f;
+    color: #4a4540;
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+/* ----------------------------------------
+   Responsive Design
+   ---------------------------------------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+        letter-spacing: 0.18em;
+    }
+
+    .musicians-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    .songs-columns {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+        letter-spacing: 0.06em;
+    }
+
+    .about-section h2,
+    .musicians-section h2,
+    .songs-section h2,
+    .contact-section h2 {
+        font-size: 1.4rem;
+        letter-spacing: 0.12em;
+    }
+}
